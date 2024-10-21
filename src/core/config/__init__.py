@@ -1,6 +1,10 @@
 import os
 from dotenv import load_dotenv
 
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
 class Config:

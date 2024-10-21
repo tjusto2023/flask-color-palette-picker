@@ -4,5 +4,4 @@ run:
 
 test:
 	@echo "Starting run tests..."
-	set PYTHONPATH=src && pytest
-	SET PYTHONUNBUFFERED =1
+	set PYTHONPATH=src && pytest -s

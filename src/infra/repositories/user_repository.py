@@ -15,8 +15,8 @@ class UserRepository(IUserRepository):
                 pictures=[]
             )
         
-        print(userModel.pictures, userModel.username, userModel.password, userModel.email)
-        return userModel.save()
+        userModel.save()
+        return userModel
     
     def get_all(self) -> List[UserModel]:
         return list(UserModel.objects())
@@ -42,7 +42,7 @@ class UserRepository(IUserRepository):
         )
 
         userModel.pictures.append(picture_model)
-        userModel.save()
+        return userModel.save()
            
     def get_picture_by_user_id(self, user_id: str, picture_id: str) -> UserModel:
         user = UserModel.objects(
