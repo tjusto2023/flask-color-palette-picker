@@ -1,0 +1,49 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+.Python
+env/
+venv/
+ENV/
+ENV.*/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+
+# Configurações do Flask
+instance/
+.webassets-cache
+
+# Arquivos de logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos de banco de dados
+*.sqlite3
+*.db
+
+# Arquivos gerados
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Arquivos de configuração do Pytest
+.pytest_cache/
+
+# Arquivos do Jupyter Notebook
+.ipynb_checkpoints/
+
+# Ambiente virtual
+.env
+.env.local
+.env.*.local
