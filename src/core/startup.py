@@ -4,6 +4,15 @@ from .database import initialize_db
 from .config import Config
 from application.interfaces.repositories.user_repository import IUserRepository
 from infra.repositories.user_repository import UserRepository
+app = Flask(__name__)
+
+@app.before_request
+def startRequest():
+    DependencyInjection.startRequest()
+
+@app.teardown_request
+def endRequest():
+    DependencyInjection.endRequest()
 
 def injectProviders():
     DependencyInjection.addSingleton(Config, Config)
@@ -12,8 +21,7 @@ def injectProviders():
 def bootstrap():
     injectProviders()
     initialize_db()
-
-    app = Flask(__name__)
+    
     return app
 
 if __name__ == "__main__":
