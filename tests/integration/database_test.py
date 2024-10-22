@@ -1,26 +1,27 @@
 import pytest
 from mongoengine import disconnect
-from src.core.di import setup_dependency_container
-from src.core.database import initialize_db
 from faker import Faker
 faker = Faker()
+from bson import ObjectId
 
-from src.application.repositories.user_repository import IUserRepository
+from .config import TestConfig
+from src.core.di import DependencyInjection
+from src.core.database import initialize_db
+
+from src.application.interfaces.repositories.user_repository import IUserRepository
 from src.infra.repositories.user_repository import UserRepository
 from src.infra.models.user_model import UserModel
-from src.infra.models.picture_model import PictureModel
 from src.domains.picture import Picture
 from src.domains.user import User
-from bson import ObjectId
 
 @pytest.fixture(scope='module', autouse=True)
 def setup_database():
-    setup_dependency_container()
+    DependencyInjection.addSingleton('Config', TestConfig)
     initialize_db()
 
     yield
 
-    # UserModel.drop_collection()
+    UserModel.drop_collection()
     disconnect()
 
 @pytest.fixture

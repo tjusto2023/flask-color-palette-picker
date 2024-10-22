@@ -1,10 +1,9 @@
 from mongoengine import connect
-from kink import di
-from .config import Config
+from core.di import DependencyInjection 
 
 def initialize_db() -> None:
     try:
-        config = di[Config]
+        config = DependencyInjection.inject('Config')
         connect(
             db=config.MONGO_DB_NAME, 
             host=config.MONGO_URI

@@ -1,5 +1,5 @@
 from typing import List
-from application.repositories.user_repository import IUserRepository
+from application.interfaces.repositories.user_repository import IUserRepository
 from infra.models.user_model import UserModel
 from infra.models.picture_model import PictureModel
 from domains.user import User
@@ -42,7 +42,8 @@ class UserRepository(IUserRepository):
         )
 
         userModel.pictures.append(picture_model)
-        return userModel.save()
+        userModel.save()
+        return userModel
            
     def get_picture_by_user_id(self, user_id: str, picture_id: str) -> UserModel:
         user = UserModel.objects(

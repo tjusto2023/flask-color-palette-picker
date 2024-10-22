@@ -10,7 +10,6 @@ ENV/
 ENV.*/
 
 # IDEs
-.vscode/
 .idea/
 *.swp
 *.swo

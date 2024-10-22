@@ -1,9 +1,16 @@
 from flask import Flask
-from .di import setup_dependency_container
+from .di import DependencyInjection
 from .database import initialize_db
+from .config import Config
+from application.interfaces.repositories.user_repository import IUserRepository
+from infra.repositories.user_repository import UserRepository
+
+def injectProviders():
+    DependencyInjection.addSingleton(Config, Config)
+    DependencyInjection.addScoped(IUserRepository, UserRepository)
 
 def bootstrap():
-    setup_dependency_container()
+    injectProviders()
     initialize_db()
 
     app = Flask(__name__)
