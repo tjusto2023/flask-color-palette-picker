@@ -4,8 +4,6 @@
 
 Este projeto está em desenvolvimento contínuo. Estamos aprimorando a aplicação para melhorar o desempenho do processamento de imagens e a geração de paletas de cores usando o algoritmo KMeans.
 
-![Projeto em Andamento](https://via.placeholder.com/600x400.png?text=Projeto+em+Desenvolvimento)
-
 Fique atento para novas atualizações e funcionalidades futuras!
 
 ## Objetivo
