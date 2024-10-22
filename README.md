@@ -8,7 +8,7 @@ Fique atento para novas atualizações e funcionalidades futuras!
 
 ## Objetivo
 
-Este projeto Flask foi desenvolvido para receber uma imagem e gerar uma paleta de cores utilizando o algoritmo **KMeans**. Ele é arquiteturano no padrão **Onion Architecture**, inspirada no repositório[Cookiecutter flask clean architecture](https://github.com/microsoft/cookiecutter-python-flask-clean-architecture).
+Este projeto Flask foi desenvolvido para receber uma imagem e gerar uma paleta de cores utilizando o algoritmo **KMeans**. Ele é arquiteturano no padrão **Onion Architecture**, inspirada no repositório [Cookiecutter flask clean architecture](https://github.com/microsoft/cookiecutter-python-flask-clean-architecture).
 
 ## Funcionalidades
 
@@ -17,8 +17,6 @@ Este projeto Flask foi desenvolvido para receber uma imagem e gerar uma paleta d
 - Exibição de uma paleta de cores gerada pelo algoritmo KMeans.
 
 ## Estrutura do Projeto
-
-Este projeto segue a estrutura **Onio**, organizada conforme o modelo Clean Architecture:
 
 ```
 root/
@@ -116,9 +114,17 @@ cd flask-color-palette-picker
 
 2. Crie um ambiente virtual:
 
+No Linux:
 ```bash
 python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
+source venv/bin/activate  
+```
+
+No Windows: 
+
+```bash
+python -m venv venv
+venv\Scripts\activate 
 ```
 
 3. Instale as dependências do projeto:
