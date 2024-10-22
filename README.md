@@ -8,7 +8,7 @@ Fique atento para novas atualizações e funcionalidades futuras!
 
 ## Objetivo
 
-Este projeto Flask foi desenvolvido para receber uma imagem e gerar uma paleta de cores utilizando o algoritmo **KMeans**. Ele é baseado na estrutura **Onio**, inspirada no [cookiecutter-python-flask-clean-architecture](https://github.com/microsoft/cookiecutter-python-flask-clean-architecture).
+Este projeto Flask foi desenvolvido para receber uma imagem e gerar uma paleta de cores utilizando o algoritmo **KMeans**. Ele é arquiteturano no padrão **Onion Architecture**, inspirada no repositório[Cookiecutter flask clean architecture](https://github.com/microsoft/cookiecutter-python-flask-clean-architecture).
 
 ## Funcionalidades
 
